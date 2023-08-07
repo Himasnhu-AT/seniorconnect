@@ -24,12 +24,38 @@ git clone https://github.com/Himasnhu-at/seniorconnect
 
 ## TO-DO Tasks
 
+##### updates will be made as the project progresses
 [x] Create project
 [x] Create UI for splash screen, design images
 [x] Create UI for login and SignUp
 [ ] Connect with Firebase
 [ ] Create home UI with multiple Group Options for different devs
 [ ] Create profile page with editing feature
+
+##### Testing OS | Person
+[ ] Test the app on IOS
+[ ] Test the app on Android
+[ ] Test the app on Web
+[ ] Test the app on Windows
+[ ] Test the app on Linux
+[ ] Test the app on MacOS
+
+##### TESTING: IOS | ANDROID | WEB | WINDOWS | LINUX | MACOS  || feature
+#1 | [x] | [x] | [x] | [ ] | [ ] | [x]  || UI Update
+#2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+#3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+#4 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+#5 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+#6 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ]
+
+###### Future Updates
+[ ] Add chat feature
+[ ] Add video call feature
+[ ] Add notification feature
+[ ] Add search feature
+[ ] Add settings feature
+[ ] Add dark mode feature
+
 
 ## Contributing
 
