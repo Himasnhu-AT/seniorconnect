@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/constants/button.dart';
-import 'package:seniorconnect/constants/text_feild_sign.dart';
+import 'package:seniorconnect/constants/widget/button.dart';
+import 'package:seniorconnect/constants/widget/text_feild_sign.dart';
 
 class Loginpage extends StatelessWidget {
   const Loginpage({super.key});
