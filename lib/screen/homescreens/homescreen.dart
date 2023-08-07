@@ -1,3 +1,4 @@
+// ignore_for_file: sized_box_for_whitespace
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
 import 'package:seniorconnect/screen/chatscreens/trendinggroups.dart';
@@ -25,10 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: GlobalVariable.backgroundColor,
       ),
-      body: const Column(
+      body: Column(
         children: [
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Trending Groups',
             style: TextStyle(
               fontSize: 20,
@@ -36,9 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 5),
-          Expanded(
-            child: SingleChildScrollView(
+          const SizedBox(height: 5),
+          Container(
+            width: double.infinity,
+            height: 200,
+            child: const SingleChildScrollView(
               child: TrendingGroupChat(),
             ),
           ),
