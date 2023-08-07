@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
 import 'package:seniorconnect/screen/chatscreens/trendinggroups.dart';
+import 'package:seniorconnect/screen/chatscreens/yourmessages.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -26,26 +27,50 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: GlobalVariable.backgroundColor,
       ),
-      body: Column(
-        children: [
-          const SizedBox(height: 20),
-          const Text(
-            'Trending Groups',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w400,
-              color: Colors.white,
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            const SizedBox(height: 20),
+            const Text(
+              'Trending Groups',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+              ),
             ),
-          ),
-          const SizedBox(height: 5),
-          Container(
-            width: double.infinity,
-            height: 200,
-            child: const SingleChildScrollView(
-              child: TrendingGroupChat(),
+            const SizedBox(height: 5),
+            Container(
+              width: double.infinity,
+              height: 200,
+              child: const SingleChildScrollView(
+                child: TrendingGroupChat(),
+              ),
             ),
-          ),
-        ],
+            //
+            //
+            const SizedBox(height: 20),
+            //
+            //
+            const Text(
+              'Your Messages',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 5),
+            Container(
+              width: double.infinity,
+              height: 400,
+              child: const SingleChildScrollView(
+                child: UsersMessages(numberOfChats: 5),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

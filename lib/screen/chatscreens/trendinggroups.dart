@@ -15,30 +15,35 @@ class _TrendingGroupChatState extends State<TrendingGroupChat> {
     return Column(
       children: [
         DevGroupChatIcon(
+          id: '12',
           imageAddress: GlobalVariable.groupicon,
           groupName: 'App Development',
           memberDetails: '29,000',
           onTap: () => {},
         ),
         DevGroupChatIcon(
+          id: '12',
           imageAddress: GlobalVariable.groupicon,
           groupName: 'App Development',
           memberDetails: '29,000',
           onTap: () => {},
         ),
         DevGroupChatIcon(
+          id: '12',
           imageAddress: GlobalVariable.groupicon,
           groupName: 'App Development',
           memberDetails: '29,000',
           onTap: () => {},
         ),
         DevGroupChatIcon(
+          id: '12',
           imageAddress: GlobalVariable.groupicon,
           groupName: 'App Development',
           memberDetails: '29,000',
           onTap: () => {},
         ),
         DevGroupChatIcon(
+          id: '12',
           imageAddress: GlobalVariable.groupicon,
           groupName: 'App Development',
           memberDetails: '29,000',

@@ -4,6 +4,7 @@ class DevGroupChatIcon extends StatelessWidget {
   final String imageAddress;
   final String groupName;
   final String memberDetails;
+  final String id;
   final VoidCallback onTap;
 
   const DevGroupChatIcon({
@@ -11,33 +12,19 @@ class DevGroupChatIcon extends StatelessWidget {
     required this.imageAddress,
     required this.groupName,
     required this.memberDetails,
+    required this.id,
     required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: const Color.fromARGB(64, 146, 146, 194),
-      child: ListTile(
-        leading: CircleAvatar(
-          backgroundImage: AssetImage(imageAddress),
-        ),
-        title: Text(
-          groupName,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        subtitle: Text(
-          memberDetails,
-          style: const TextStyle(
-            color: Colors.white70,
-          ),
-        ),
-        onTap: onTap,
+    return ListTile(
+      leading: CircleAvatar(
+        backgroundImage: AssetImage(imageAddress),
       ),
+      title: Text(groupName),
+      subtitle: Text(memberDetails),
+      onTap: onTap,
     );
   }
 }
