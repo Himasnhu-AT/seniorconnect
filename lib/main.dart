@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/screen/signup/signup.dart';
+import 'package:seniorconnect/screen/splashscreen/splashscreen1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           background: const Color.fromARGB(255, 1, 0, 32),
         ),
       ),
-      home: const SignUpPage(),
+      home: const SplashScreen1(),
     );
   }
 }
