@@ -33,14 +33,14 @@ Updates will be made as the project progresses:
 - [ ] Create home UI with multiple Group Options for different devs
 - [ ] Create profile page with editing feature
 
-##### Testing OS 
+<!-- ##### Testing OS 
 
 - [ ] Test the app on IOS
 - [ ] Test the app on Android
 - [ ] Test the app on Web
 - [ ] Test the app on Windows
 - [ ] Test the app on Linux
-- [ ] Test the app on MacOS
+- [ ] Test the app on MacOS -->
 
 | TESTING | IOS | ANDROID | WEB | WINDOWS | LINUX | MACOS | feature       |
 |---------|-----|---------|-----|---------|-------|-------|---------------|
