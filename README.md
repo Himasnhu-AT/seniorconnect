@@ -44,7 +44,7 @@ If you discover any security issues related to the application that could compro
 
 ## LICENSE
 
-The project is licensed under the [MIT License](https://github.com/Himasnhu-at/seniorconnect/LICENSE), 2023 @Himasnhu-AT.
+The project is licensed under the [MIT License](https://github.com/Himasnhu-AT/seniorconnect/blob/main/LICENSE), 2023 @Himasnhu-AT.
 
 ##### EDITS:
 
