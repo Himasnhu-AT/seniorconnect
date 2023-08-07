@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/constants/Global_Variables.dart';
 
 class DevGroupChatIcon extends StatelessWidget {
   final String imageAddress;

@@ -1,7 +1,6 @@
 // ignore_for_file: sized_box_for_whitespace
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
-import 'package:seniorconnect/screen/chatscreens/trendinggroups.dart';
 import 'package:seniorconnect/screen/chatscreens/yourmessages.dart';
 
 class ShowChatMainGroup extends StatefulWidget {

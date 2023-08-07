@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class DevGroupChartCard extends StatelessWidget {
@@ -34,7 +36,8 @@ class DevGroupChartCard extends StatelessWidget {
                     backgroundImage: AssetImage(imageAddress),
                     radius: 50, // Adjust the radius to make the image larger
                   ),
-                  SizedBox(height: 10), // Add some space between image and text
+                  const SizedBox(
+                      height: 10), // Add some space between image and text
                   Text(
                     groupName,
                     style: const TextStyle(
