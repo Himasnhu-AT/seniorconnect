@@ -22,11 +22,18 @@ git clone https://github.com/Himasnhu-at/seniorconnect
    flutter run apk
    ```
 
+## TO-DO Tasks
+
+[x] Create project
+[ ] Create UI for login and SignUp
+[ ] Connect with Firebase
+[ ] Create home UI with multiple Group Options for different devs
+[ ] Create profile page with editing feature
+
 ## Contributing
 
 Instructions for contributing:
-
-1. Fork this repository to contribute, create issues, etc.
+Fork this repository to contribute, create issues, etc.
 
 #### Adding a Feature
 
