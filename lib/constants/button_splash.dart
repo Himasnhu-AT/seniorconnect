@@ -16,8 +16,8 @@ class CustomButtonSplash extends StatelessWidget {
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
         minimumSize: const Size(double.infinity, 50),
-        primary: Colors.white, // Set the background color to white
-        onPrimary: Colors.black, // Set the text color to black
+        backgroundColor: Colors.white, // Set the background color to white
+        foregroundColor: Colors.black, // Set the text color to black
         shape: RoundedRectangleBorder(
           borderRadius:
               BorderRadius.circular(8.0), // Adjust the border radius as needed
