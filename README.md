@@ -25,7 +25,8 @@ git clone https://github.com/Himasnhu-at/seniorconnect
 ## TO-DO Tasks
 
 [x] Create project
-[ ] Create UI for login and SignUp
+[x] Create UI for splash screen, design images
+[x] Create UI for login and SignUp
 [ ] Connect with Firebase
 [ ] Create home UI with multiple Group Options for different devs
 [ ] Create profile page with editing feature
