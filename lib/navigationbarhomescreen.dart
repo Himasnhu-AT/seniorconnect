@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/screen/homescreens/chatmaingroup.dart';
 import 'package:seniorconnect/screen/homescreens/homescreen.dart';
-import 'package:seniorconnect/screen/login/login.dart';
 
-import '../Global_Variables.dart';
+import 'constants/Global_Variables.dart';
 // import 'package:badges/badges.dart';
 
 class BottomBar extends StatefulWidget {
@@ -20,7 +20,7 @@ class _BottomBarState extends State<BottomBar> {
 
   List<Widget> pages = [
     const HomeScreen(),
-    const Loginpage(),
+    const ShowChatMainGroup(),
     const Center(
       child: Text('Cart Page'),
     ),
@@ -82,7 +82,7 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.person_outline_outlined,
+                Icons.chat_bubble_outline_outlined,
               ),
             ),
             label: '',
@@ -104,7 +104,7 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.shopping_cart_checkout_outlined,
+                Icons.person_outline_outlined,
               ),
             ),
             label: '',

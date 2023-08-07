@@ -28,7 +28,6 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: GlobalVariable.backgroundColor,
       ),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             const SizedBox(height: 20),
@@ -42,9 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 5),
             Container(
-              width: double.infinity,
+              // width: double.infinity,
               height: 200,
               child: const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
                 child: TrendingGroupChat(),
               ),
             ),

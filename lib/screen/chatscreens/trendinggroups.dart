@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
-import 'package:seniorconnect/constants/chatshowcase/devgroupchaticon.dart';
+import 'package:seniorconnect/constants/chatshowcase/devgroupchartcard.dart';
 
 class TrendingGroupChat extends StatefulWidget {
   const TrendingGroupChat({Key? key}) : super(key: key);
@@ -12,44 +12,77 @@ class TrendingGroupChat extends StatefulWidget {
 class _TrendingGroupChatState extends State<TrendingGroupChat> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: [
-        DevGroupChatIcon(
-          id: '12',
+        DevGroupChartCard(
           imageAddress: GlobalVariable.groupicon,
-          groupName: 'App Development',
-          memberDetails: '29,000',
+          groupName: 'Hello',
+          memberDetails: '2900',
+          id: '12',
           onTap: () => {},
         ),
-        DevGroupChatIcon(
-          id: '12',
+        DevGroupChartCard(
           imageAddress: GlobalVariable.groupicon,
-          groupName: 'App Development',
-          memberDetails: '29,000',
+          groupName: 'Hello',
+          memberDetails: '2900',
+          id: '12',
           onTap: () => {},
         ),
-        DevGroupChatIcon(
-          id: '12',
+        DevGroupChartCard(
           imageAddress: GlobalVariable.groupicon,
-          groupName: 'App Development',
-          memberDetails: '29,000',
+          groupName: 'Hello',
+          memberDetails: '2900',
+          id: '12',
           onTap: () => {},
         ),
-        DevGroupChatIcon(
-          id: '12',
+        DevGroupChartCard(
           imageAddress: GlobalVariable.groupicon,
-          groupName: 'App Development',
-          memberDetails: '29,000',
-          onTap: () => {},
-        ),
-        DevGroupChatIcon(
+          groupName: 'Hello',
+          memberDetails: '2900',
           id: '12',
-          imageAddress: GlobalVariable.groupicon,
-          groupName: 'App Development',
-          memberDetails: '29,000',
           onTap: () => {},
         ),
       ],
     );
+//     return Column(
+//       children: [
+//         DevGroupChatIcon(
+//           id: '12',
+//           imageAddress: GlobalVariable.groupicon,
+//           groupName: 'App Development',
+//           memberDetails: '29,000',
+//           onTap: () => {},
+//         ),
+//         DevGroupChatIcon(
+//           id: '12',
+//           imageAddress: GlobalVariable.groupicon,
+//           groupName: 'App Development',
+//           memberDetails: '29,000',
+//           onTap: () => {},
+//         ),
+//         DevGroupChatIcon(
+//           id: '12',
+//           imageAddress: GlobalVariable.groupicon,
+//           groupName: 'App Development',
+//           memberDetails: '29,000',
+//           onTap: () => {},
+//         ),
+//         DevGroupChatIcon(
+//           id: '12',
+//           imageAddress: GlobalVariable.groupicon,
+//           groupName: 'App Development',
+//           memberDetails: '29,000',
+//           onTap: () => {},
+//         ),
+//         DevGroupChatIcon(
+//           id: '12',
+//           imageAddress: GlobalVariable.groupicon,
+//           groupName: 'App Development',
+//           memberDetails: '29,000',
+//           onTap: () => {},
+//         ),
+//       ],
+//     );
+//   }
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/widget/button.dart';
-import 'package:seniorconnect/constants/widget/navigationbarhomescreen.dart';
+import 'package:seniorconnect/navigationbarhomescreen.dart';
 import 'package:seniorconnect/constants/widget/text_feild_sign.dart';
 
 class Loginpage extends StatelessWidget {
