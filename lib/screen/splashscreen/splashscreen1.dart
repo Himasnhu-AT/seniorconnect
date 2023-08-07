@@ -20,7 +20,7 @@ class SplashScreen1 extends StatelessWidget {
             ),
             // Top of the screen, small word "Skip" button
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(0),
               child: Align(
                 alignment: Alignment.topRight,
                 child: TextButton(
@@ -45,9 +45,9 @@ class SplashScreen1 extends StatelessWidget {
               ),
             ),
             // Image in the middle, taking complete width
-            const SizedBox(
-              height: 20,
-            ),
+            // const SizedBox(
+            //   height: 20,
+            // ),
             Image.asset(
               GlobalVariable.splash1,
               fit: BoxFit.cover,
@@ -57,24 +57,23 @@ class SplashScreen1 extends StatelessWidget {
             ),
 
             // Text in the middle section
-            const Expanded(
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'App to get in touch with your senior and learn with them based on project they are doing. \nIn partnership/powered by TECHNOBYTE official technical society of NIT-KKR.',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'App to get in touch with your seniors and learn with them based on the projects they are doing. \nIn partnership/powered by TECHNOBYTE, the official technical society of NIT-KKR.',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
+
             // Continue button at the bottom
             Padding(
               padding: const EdgeInsets.all(16.0),

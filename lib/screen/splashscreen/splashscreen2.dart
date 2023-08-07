@@ -57,24 +57,23 @@ class SplashScreen2 extends StatelessWidget {
             ),
 
             // Text in the middle section
-            const Expanded(
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Connect with and seek guidance from seniors of your college for a thriving and amazing career ahead of you',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Connect with and seek guidance from seniors of your college for a thriving and amazing career ahead of you',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
+
             // Continue button at the bottom
             Padding(
               padding: const EdgeInsets.all(16.0),
