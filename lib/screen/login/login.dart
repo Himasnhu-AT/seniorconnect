@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/widget/button.dart';
+import 'package:seniorconnect/constants/widget/navigationbarhomescreen.dart';
 import 'package:seniorconnect/constants/widget/text_feild_sign.dart';
+import 'package:seniorconnect/screen/homescreens/homescreen.dart';
 
 class Loginpage extends StatelessWidget {
   const Loginpage({super.key});
@@ -81,7 +83,16 @@ class Loginpage extends StatelessWidget {
                 //
                 //  login button
                 //
-                CustomButton(text: 'Sign IN', onTap: () {}),
+                CustomButton(
+                    text: 'Sign IN',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BottomBar(),
+                        ),
+                      );
+                    }),
               ],
             ),
           ),
