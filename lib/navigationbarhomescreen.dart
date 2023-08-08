@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/constants/messagewidget/chatscreen.dart';
 import 'package:seniorconnect/screen/homescreens/chatmaingroup.dart';
 import 'package:seniorconnect/screen/homescreens/homescreen.dart';
+import 'package:seniorconnect/screen/homescreens/profilescreen.dart';
 
 import 'constants/Global_Variables.dart';
 // import 'package:badges/badges.dart';
@@ -21,9 +23,8 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget> pages = [
     const HomeScreen(),
     const ShowChatMainGroup(),
-    const Center(
-      child: Text('Cart Page'),
-    ),
+    // const ProfileScreen(),
+    ChatScreen()
   ];
 
   void updatePage(int page) {
@@ -66,7 +67,7 @@ class _BottomBarState extends State<BottomBar> {
             label: '',
           ),
 
-          // Profile
+          // message
 
           BottomNavigationBarItem(
             icon: Container(
@@ -82,13 +83,35 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.chat_bubble_outline_outlined,
+                Icons.telegram_outlined,
               ),
             ),
             label: '',
           ),
 
-          // Cart
+          // Profile
+
+          // BottomNavigationBarItem(
+          //   icon: Container(
+          //     width: bottomBarWidth,
+          //     decoration: BoxDecoration(
+          //       border: Border(
+          //         top: BorderSide(
+          //           color: _page == 2
+          //               ? GlobalVariable.selectedNavBarColor
+          //               : GlobalVariable.backgroundColor,
+          //           width: bottomBarBorderWidth,
+          //         ),
+          //       ),
+          //     ),
+          //     child: const Icon(
+          //       Icons.person_outline_outlined,
+          //     ),
+          //   ),
+          //   label: '',
+          // ),
+
+          // chat
 
           BottomNavigationBarItem(
             icon: Container(
@@ -104,7 +127,7 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.person_outline_outlined,
+                Icons.chat_bubble_outline_rounded,
               ),
             ),
             label: '',

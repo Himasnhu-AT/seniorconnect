@@ -7,6 +7,7 @@ class GlobalVariable {
   static const String splash2 = 'assests/image/splash2.png';
   static const String splash3 = 'assests/image/splash3.png';
   static const String groupicon = 'assests/image/groupicon.png';
+  static const String profilephoto = 'assests/image/profilephoto.png';
 
   static const Color greyBackgroundCOlor = Color(0xffebecee);
   static var selectedNavBarColor = Colors.cyan[800]!;
