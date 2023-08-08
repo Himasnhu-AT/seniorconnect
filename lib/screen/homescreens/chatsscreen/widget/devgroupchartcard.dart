@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/screen/popupscreen/imageviewscreen.dart';
-
-import '../screenaddons/chatscreen.dart';
+import 'package:seniorconnect/screen/homescreens/chatsscreen/screenaddons/groupchatscreen.dart';
 
 class DevGroupChartCard extends StatelessWidget {
   final String imageAddress;
@@ -27,7 +25,7 @@ class DevGroupChartCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return ChatScreen(title: groupName);
+              return GroupChatScreen(title: groupName);
             },
           ),
         );
@@ -52,7 +50,8 @@ class DevGroupChartCard extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                        height: 10), // Add some space between image and text
+                      height: 10,
+                    ), // Add some space between image and text
                     Text(
                       groupName,
                       style: const TextStyle(

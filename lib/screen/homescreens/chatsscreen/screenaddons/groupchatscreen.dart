@@ -4,17 +4,17 @@ import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/recievemessa
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/sendmessagewidget.dart';
 import 'package:seniorconnect/screen/homescreens/profilescreen/widget/showprofilescreengroups.dart';
 
-class ChatScreen extends StatefulWidget {
+class GroupChatScreen extends StatefulWidget {
   final String title;
 
-  const ChatScreen({super.key, required this.title});
+  const GroupChatScreen({super.key, required this.title});
 
   @override
   // ignore: library_private_types_in_public_api
-  _ChatScreenState createState() => _ChatScreenState();
+  _GroupChatScreenState createState() => _GroupChatScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _GroupChatScreenState extends State<GroupChatScreen> {
   List<String> messages = [];
 
   @override
@@ -90,6 +90,6 @@ class _ChatScreenState extends State<ChatScreen> {
 
 void main() {
   runApp(const MaterialApp(
-    home: ChatScreen(title: 'Chat Title'),
+    home: GroupChatScreen(title: 'Chat Title'),
   ));
 }
