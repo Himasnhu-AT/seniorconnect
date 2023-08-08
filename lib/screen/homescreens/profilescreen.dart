@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 import '../../constants/global_variables.dart';
@@ -15,7 +17,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       context,
       MaterialPageRoute(
         builder: (context) =>
-            ImageViewScreen(), // Replace ImageViewScreen with the name of your image view screen
+            const ImageViewScreen(), // Replace ImageViewScreen with the name of your image view screen
       ),
     );
   }
