@@ -6,7 +6,8 @@ class SendMessageWidget extends StatelessWidget {
   String message;
   final Function(String) onMessageSent;
 
-  SendMessageWidget({required this.message, required this.onMessageSent});
+  SendMessageWidget(
+      {super.key, required this.message, required this.onMessageSent});
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +15,16 @@ class SendMessageWidget extends StatelessWidget {
       children: [
         Expanded(
           child: TextField(
+            style: const TextStyle(
+              color: Colors.white,
+            ),
             controller: TextEditingController(text: message),
             onChanged: (newMessage) {
               message = newMessage;
             },
             decoration: InputDecoration(
               hintText: 'Type your message...',
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 color: Colors.white,
               ),
               border: OutlineInputBorder(
@@ -30,7 +34,7 @@ class SendMessageWidget extends StatelessWidget {
           ),
         ),
         IconButton(
-          icon: Icon(Icons.send),
+          icon: const Icon(Icons.send),
           onPressed: () {
             if (message.isNotEmpty) {
               onMessageSent(message);

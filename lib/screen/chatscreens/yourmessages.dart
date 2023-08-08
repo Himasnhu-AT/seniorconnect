@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../constants/Global_Variables.dart';
 import '../../constants/chatshowcase/devgroupchaticon.dart';
+import 'chatscreen.dart';
 
 class UsersMessages extends StatefulWidget {
   final int numberOfChats;
@@ -42,6 +43,13 @@ class _UsersMessagesState extends State<UsersMessages> {
           onTap: () {
             // Implement your logic when a chat is tapped
             // You can navigate to the chat screen or perform any other action.
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: ((context) =>
+                    ChatScreen(title: chatData['groupName']!)),
+              ),
+            );
           },
         );
       }).toList(),
