@@ -1,24 +1,55 @@
-// ignore_for_file: sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
 
-import '../../../constants/global_variables.dart';
-import '../../popupscreen/imageviewscreen.dart';
+import '../../../../constants/global_variables.dart';
+import '../../../popupscreen/imageviewscreen.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class ShowProfileScreen extends StatefulWidget {
+  final String name;
+  final String imageAddress;
+  final String userID;
+  final String email;
+  final String phonenumber;
+  final String address;
+
+  const ShowProfileScreen({
+    Key? key,
+    required this.name,
+    required this.imageAddress,
+    required this.userID,
+    required this.email,
+    required this.phonenumber,
+    required this.address,
+  }) : super(key: key);
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<ShowProfileScreen> createState() => _ShowProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ShowProfileScreenState extends State<ShowProfileScreen> {
+  late String name;
+  late String imageAddress;
+  late String userID;
+  late String email;
+  late String phonenumber;
+  late String address;
+
+  @override
+  void initState() {
+    super.initState();
+    name = widget.name;
+    imageAddress = widget.imageAddress;
+    userID = widget.userID;
+    email = widget.email;
+    phonenumber = widget.phonenumber;
+    address = widget.address;
+  }
+
   void _openImageView() {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const ImageViewScreen(
-          title: 'UserName',
+        builder: (context) => ImageViewScreen(
+          title: name,
           imageAddress: GlobalVariable.profilephoto,
         ), // Replace ImageViewScreen with the name of your image view screen
       ),
@@ -29,9 +60,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Profile',
-          style: TextStyle(
+        title: Text(
+          name,
+          style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
             color: Colors.white,
@@ -39,6 +70,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         backgroundColor: GlobalVariable.backgroundColor,
       ),
+      // ignore: sized_box_for_whitespace
       body: Container(
         width: double.infinity,
         child: Column(
@@ -54,34 +86,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   backgroundImage: AssetImage(GlobalVariable.profilephoto)),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Username',
-              style: TextStyle(
+            Text(
+              name,
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'user@example.com',
-              style: TextStyle(
+            Text(
+              email,
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              '+1234567890',
-              style: TextStyle(
+            Text(
+              phonenumber,
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Address',
-              style: TextStyle(
+            Text(
+              address,
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),
