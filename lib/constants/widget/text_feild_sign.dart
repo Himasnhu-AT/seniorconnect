@@ -14,13 +14,17 @@ class CustomTextFieldSign extends StatefulWidget {
 }
 
 class _CustomTextFieldSignState extends State<CustomTextFieldSign> {
-  bool _isFocused = false;
+  bool _isFocused = true;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(
+        color: Colors.white,
+      ),
       decoration: InputDecoration(
         hintText: widget.hintText,
+        hintStyle: const TextStyle(color: Colors.white),
         border: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white70,
@@ -42,12 +46,6 @@ class _CustomTextFieldSignState extends State<CustomTextFieldSign> {
           color: Colors.white70,
         ),
       ),
-      validator: (val) {
-        if (val == null || val.isEmpty) {
-          return 'Enter your ${widget.hintText}';
-        }
-        return null;
-      },
       onTap: () {
         setState(() {
           _isFocused = true;

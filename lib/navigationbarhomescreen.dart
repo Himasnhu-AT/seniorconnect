@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/screen/homescreens/chatmaingroup.dart';
 import 'package:seniorconnect/screen/homescreens/mainscreen/homescreen.dart';
-import 'package:seniorconnect/screen/homescreens/profilescreen.dart';
+import 'package:seniorconnect/screen/homescreens/profilescreen/mainprofilescreen.dart';
+import 'package:seniorconnect/screen/popupscreen/postviewscreen.dart';
 
 import 'constants/Global_Variables.dart';
 // import 'package:badges/badges.dart';
@@ -21,7 +21,7 @@ class _BottomBarState extends State<BottomBar> {
 
   List<Widget> pages = [
     HomeScreen(),
-    const ShowChatMainGroup(),
+    const PostScreenPopUp(),
     const ProfileScreen(),
     // ChatScreen()
   ];
@@ -61,6 +61,7 @@ class _BottomBarState extends State<BottomBar> {
               ),
               child: const Icon(
                 Icons.home_outlined,
+                size: 28,
               ),
             ),
             label: '',
@@ -82,7 +83,8 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.telegram_outlined,
+                Icons.file_upload_outlined,
+                size: 28,
               ),
             ),
             label: '',
@@ -105,6 +107,7 @@ class _BottomBarState extends State<BottomBar> {
               ),
               child: const Icon(
                 Icons.person_outline_outlined,
+                size: 28,
               ),
             ),
             label: '',

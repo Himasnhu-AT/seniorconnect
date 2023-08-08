@@ -17,4 +17,5 @@ class GlobalVariable {
   static const String groupicon = 'assests/image/groupicon.png';
   static const String postphoto = 'assests/image/postexample.png';
   static const String profilephoto = 'assests/image/profilephoto.png';
+  static const String statusphoto = 'assests/image/status.webp';
 }

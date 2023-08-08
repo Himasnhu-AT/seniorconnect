@@ -29,13 +29,13 @@ Updates will be made as the project progresses:
 - [x] Create project
 - [x] Create UI for splash screen, design images
 - [x] Create UI for login and SignUp
-- [ ] Connect with Firebase
 - [x] Create home UI with multiple Group Options for different devs
 - [ ] Create profile page with editing feature
-- [ ] refurbish home UI with newer feature concept, change home page to social media page
-- [ ] allow post creation
+- [x] refurbish home UI with newer feature concept, change home page to social media page
+- [x] allow post creation
 - [ ] settings page, and sidebar design
 
+- [ ] implement Backend, update TO-DOs
 
 <!-- ##### Testing OS 
 
@@ -50,7 +50,7 @@ Updates will be made as the project progresses:
 |---------|-----|---------|-----|---------|-------|-------|---------------|
 | #1      | [x] | [x]     | [x] | [ ]     | [ ]   | [x]   | UI Update     |
 | #2      | [x] | [x]     | [x] | [ ]     | [ ]   | [x]   | UI Update     |
-| #3      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |
+| #3      | [x] | [x]     | [x] | [ ]     | [ ]   | [x]   | UI Update     |
 | #4      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |
 | #5      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |
 | #6      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |

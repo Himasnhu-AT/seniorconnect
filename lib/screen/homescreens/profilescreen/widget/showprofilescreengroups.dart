@@ -1,24 +1,48 @@
-// ignore_for_file: sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/constants/widget/button.dart';
 
-import '../../constants/global_variables.dart';
-import '../popupscreen/imageviewscreen.dart';
+import '../../../../constants/global_variables.dart';
+import '../../../popupscreen/imageviewscreen.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+class ShowProfileScreenGroupChat extends StatefulWidget {
+  final String name;
+  final String imageAddress;
+  final String groupID;
+  final String groupmembers;
+
+  const ShowProfileScreenGroupChat({
+    Key? key,
+    required this.name,
+    required this.imageAddress,
+    required this.groupID,
+    required this.groupmembers,
+  }) : super(key: key);
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<ShowProfileScreenGroupChat> createState() => _ShowProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ShowProfileScreenState extends State<ShowProfileScreenGroupChat> {
+  late String name;
+  late String imageAddress;
+  late String groupID;
+  late String groupmembers;
+
+  @override
+  void initState() {
+    super.initState();
+    name = widget.name;
+    imageAddress = widget.imageAddress;
+    groupID = widget.groupID;
+    groupmembers = widget.groupmembers;
+  }
+
   void _openImageView() {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const ImageViewScreen(
-          title: 'UserName',
+        builder: (context) => ImageViewScreen(
+          title: name,
           imageAddress: GlobalVariable.profilephoto,
         ), // Replace ImageViewScreen with the name of your image view screen
       ),
@@ -29,9 +53,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Profile',
-          style: TextStyle(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: Text(
+          name,
+          style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
             color: Colors.white,
@@ -39,6 +64,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         backgroundColor: GlobalVariable.backgroundColor,
       ),
+      // ignore: sized_box_for_whitespace
       body: Container(
         width: double.infinity,
         child: Column(
@@ -54,48 +80,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   backgroundImage: AssetImage(GlobalVariable.profilephoto)),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Username',
-              style: TextStyle(
+            Text(
+              name,
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'user@example.com',
-              style: TextStyle(
+            Text(
+              groupID,
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              '+1234567890',
-              style: TextStyle(
+            Text(
+              groupmembers,
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Address',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(height: 10),
-            // Add other user details here
-
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Implement the logic for the edit button here
-              },
-              child: const Text('Edit'),
-            ),
+            CustomButton(
+                text: 'Edit',
+                onTap: () => {
+                      // write logic here
+                    })
           ],
         ),
       ),

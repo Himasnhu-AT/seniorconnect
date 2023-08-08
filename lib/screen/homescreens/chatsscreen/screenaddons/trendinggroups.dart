@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
-import 'package:seniorconnect/constants/chatshowcase/devgroupchartcard.dart';
+import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/devgroupchartcard.dart';
 
 class TrendingGroupChat extends StatefulWidget {
   const TrendingGroupChat({Key? key}) : super(key: key);

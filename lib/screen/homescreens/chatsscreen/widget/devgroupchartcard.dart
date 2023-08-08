@@ -1,9 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/screen/popupscreen/imageviewscreen.dart';
-
-import '../../screen/chatscreens/chatscreen.dart';
+import 'package:seniorconnect/screen/homescreens/chatsscreen/screenaddons/groupchatscreen.dart';
 
 class DevGroupChartCard extends StatelessWidget {
   final String imageAddress;
@@ -29,7 +27,7 @@ class DevGroupChartCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return ChatScreen(title: groupName);
+              return GroupChatScreen(title: groupName);
             },
           ),
         );
@@ -47,17 +45,6 @@ class DevGroupChartCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (builder) {
-                              return ImageViewScreen(
-                                  title: groupName, imageAddress: imageAddress);
-                            },
-                          ),
-                        );
-                      },
                       child: CircleAvatar(
                         backgroundImage: AssetImage(imageAddress),
                         radius:
@@ -65,7 +52,8 @@ class DevGroupChartCard extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                        height: 10), // Add some space between image and text
+                      height: 10,
+                    ), // Add some space between image and text
                     Text(
                       groupName,
                       style: const TextStyle(
