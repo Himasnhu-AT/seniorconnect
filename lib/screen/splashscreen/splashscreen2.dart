@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/screen/splashscreen/splashscreen3.dart';
 import '../../constants/Global_Variables.dart';
-import '../../constants/button_splash.dart';
+import '../../constants/widget/button_splash.dart';
 import '../signup/signup.dart';
 
 class SplashScreen2 extends StatelessWidget {
