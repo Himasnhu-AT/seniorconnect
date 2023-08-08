@@ -1,9 +1,7 @@
-// ignore_for_file: sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/screen/popupscreen/imageviewscreen.dart';
 
-import 'chatscreen.dart';
+import '../screenaddons/chatscreen.dart';
 
 class DevGroupChartCard extends StatelessWidget {
   final String imageAddress;
@@ -47,17 +45,6 @@ class DevGroupChartCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (builder) {
-                              return ImageViewScreen(
-                                  title: groupName, imageAddress: imageAddress);
-                            },
-                          ),
-                        );
-                      },
                       child: CircleAvatar(
                         backgroundImage: AssetImage(imageAddress),
                         radius:

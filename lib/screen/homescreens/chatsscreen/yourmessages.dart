@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/Global_Variables.dart';
 import 'widget/devgroupchaticon.dart';
-import 'widget/chatscreen.dart';
+import 'screenaddons/chatscreen.dart';
 
 class UsersMessages extends StatefulWidget {
   final int numberOfChats;

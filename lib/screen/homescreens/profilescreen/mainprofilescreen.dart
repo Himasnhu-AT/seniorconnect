@@ -1,7 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/screen/homescreens/profilescreen/widget/showprofilescreen.dart';
+import 'package:seniorconnect/screen/homescreens/profilescreen/widget/showprofilescreenchats.dart';
 
 import '../../../constants/global_variables.dart';
 

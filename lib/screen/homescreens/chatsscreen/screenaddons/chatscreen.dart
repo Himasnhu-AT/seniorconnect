@@ -3,8 +3,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
+import 'package:seniorconnect/constants/fake_usr_details.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/recievemessagewidget.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/sendmessagewidget.dart';
+import 'package:seniorconnect/screen/homescreens/profilescreen/widget/showprofilescreenchats.dart';
 
 class ChatScreen extends StatefulWidget {
   final String title;
@@ -39,17 +41,35 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          color: Colors.white,
           onPressed: () {
             Navigator.pop(context); // Navigate back to previous screen
           },
         ),
         backgroundColor: GlobalVariable.backgroundColor,
-        title: Text(
-          widget.title, // Use the provided title here
-          style: const TextStyle(
-            fontSize: 25,
-            color: Colors.white,
-            fontWeight: FontWeight.w500,
+        title: GestureDetector(
+          // Navigate to the profile screen
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ShowProfileScreen(
+                        name: widget.title,
+                        imageAddress: FakeUserDetails.imageAddress,
+                        userID: FakeUserDetails.userID,
+                        email: FakeUserDetails.email,
+                        phonenumber: FakeUserDetails.phonenumber,
+                        address: FakeUserDetails.address,
+                      )),
+            );
+          },
+          child: Text(
+            widget.title, // Use the provided title here
+            style: const TextStyle(
+              fontSize: 25,
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
       ),
