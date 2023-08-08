@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/constants/widget/button.dart';
 import 'package:seniorconnect/constants/widget/text_feild_sign.dart';
 
 import '../../constants/global_variables.dart';
@@ -82,8 +83,17 @@ class _PostScreenPopUpState extends State<PostScreenPopUp> {
                 vertical: 5.0,
               ),
               child: CustomTextFieldSign(hintText: 'Write Here'),
-            )
+            ),
             // Row3: Post button
+            const SizedBox(
+              height: 10,
+            ),
+            CustomButton(
+              text: 'Post',
+              onTap: () => {
+                // write logic here
+              },
+            )
           ],
         ),
       ),

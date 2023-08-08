@@ -89,9 +89,9 @@ class HomeScreen extends StatelessWidget {
                 itemCount: 12, // Number of stories
                 itemBuilder: (context, index) {
                   if (index == 0) {
-                    return BuildStoryAddButton();
+                    return const BuildStoryAddButton();
                   } else {
-                    return BuildStoryItem();
+                    return const BuildStoryItem();
                   }
                 },
               ),
@@ -159,7 +159,7 @@ class BuildStoryItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) => const ImageViewScreen(
-              imageAddress: GlobalVariable.groupicon,
+              imageAddress: GlobalVariable.statusphoto,
               title: 'status',
             ),
           ),

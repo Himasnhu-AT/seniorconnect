@@ -1,8 +1,8 @@
 // ignore_for_file: sized_box_for_whitespace
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
-import 'package:seniorconnect/screen/homescreens/chatsscreen/trendinggroups.dart';
-import 'package:seniorconnect/screen/homescreens/chatsscreen/yourmessages.dart';
+import 'package:seniorconnect/screen/homescreens/chatsscreen/screenaddons/trendinggroups.dart';
+import 'package:seniorconnect/screen/homescreens/chatsscreen/screenaddons/yourmessages.dart';
 
 class ShowChatMainScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -17,6 +17,7 @@ class _HomeScreenState extends State<ShowChatMainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           'Messages',
           style: TextStyle(

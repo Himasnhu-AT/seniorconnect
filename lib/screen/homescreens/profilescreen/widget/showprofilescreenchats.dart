@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/constants/widget/button.dart';
 
 import '../../../../constants/global_variables.dart';
 import '../../../popupscreen/imageviewscreen.dart';
@@ -60,6 +61,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Text(
           name,
           style: const TextStyle(
@@ -122,11 +124,11 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
             // Add other user details here
 
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Implement the logic for the edit button here
+            CustomButton(
+              text: 'Edit',
+              onTap: () => {
+                // write logic here
               },
-              child: const Text('Edit'),
             ),
           ],
         ),
