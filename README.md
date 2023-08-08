@@ -32,6 +32,10 @@ Updates will be made as the project progresses:
 - [ ] Connect with Firebase
 - [x] Create home UI with multiple Group Options for different devs
 - [ ] Create profile page with editing feature
+- [ ] refurbish home UI with newer feature concept, change home page to social media page
+- [ ] allow post creation
+- [ ] settings page, and sidebar design
+
 
 <!-- ##### Testing OS 
 
