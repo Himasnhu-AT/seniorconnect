@@ -30,7 +30,7 @@ Updates will be made as the project progresses:
 - [x] Create UI for splash screen, design images
 - [x] Create UI for login and SignUp
 - [ ] Connect with Firebase
-- [ ] Create home UI with multiple Group Options for different devs
+- [x] Create home UI with multiple Group Options for different devs
 - [ ] Create profile page with editing feature
 
 <!-- ##### Testing OS 
@@ -45,7 +45,7 @@ Updates will be made as the project progresses:
 | TESTING | IOS | ANDROID | WEB | WINDOWS | LINUX | MACOS | feature       |
 |---------|-----|---------|-----|---------|-------|-------|---------------|
 | #1      | [x] | [x]     | [x] | [ ]     | [ ]   | [x]   | UI Update     |
-| #2      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |
+| #2      | [x] | [x]     | [x] | [ ]     | [ ]   | [x]   | UI Update     |
 | #3      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |
 | #4      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |
 | #5      | [ ] | [ ]     | [ ] | [ ]     | [ ]   | [ ]   |               |

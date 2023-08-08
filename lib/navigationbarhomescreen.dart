@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/messagewidget/chatscreen.dart';
 import 'package:seniorconnect/screen/homescreens/chatmaingroup.dart';
 import 'package:seniorconnect/screen/homescreens/homescreen.dart';
-import 'package:seniorconnect/screen/homescreens/profilescreen.dart';
 
 import 'constants/Global_Variables.dart';
 // import 'package:badges/badges.dart';
