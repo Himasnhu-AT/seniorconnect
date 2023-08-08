@@ -17,7 +17,10 @@ class ImageViewScreen extends StatelessWidget {
         title: Text(
           title,
           style: const TextStyle(
-              fontWeight: FontWeight.w500, fontSize: 25, color: Colors.white),
+            fontWeight: FontWeight.w500,
+            fontSize: 25,
+            color: Colors.white,
+          ),
         ),
       ),
       body: Center(

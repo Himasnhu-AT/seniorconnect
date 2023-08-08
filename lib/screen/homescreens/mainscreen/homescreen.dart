@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/screen/homescreens/chatsscreen/chatmaingroup.dart';
 import 'package:seniorconnect/screen/homescreens/mainscreen/widget/post.dart';
 import 'package:seniorconnect/screen/homescreens/mainscreen/widget/postwidget.dart';
+import 'package:seniorconnect/screen/popupscreen/imageviewscreen.dart';
+import 'package:seniorconnect/screen/popupscreen/postviewscreen.dart';
 
 import '../../../constants/global_variables.dart';
 
@@ -45,13 +48,34 @@ class HomeScreen extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: GlobalVariable.backgroundColor,
-          title: const Text(
-            'Senior Connect',
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
-            ),
+          title: Row(
+            children: [
+              const Text(
+                'Senior Connect',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
+              const Spacer(),
+              GestureDetector(
+                onTap: () {
+                  // Handle notifications
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ShowChatMainScreen(),
+                    ),
+                  );
+                },
+                child: const Icon(
+                  Icons.telegram_outlined,
+                  color: Colors.white,
+                  size: 30,
+                ),
+              ),
+            ],
           ),
         ),
         body: Column(
@@ -65,9 +89,9 @@ class HomeScreen extends StatelessWidget {
                 itemCount: 12, // Number of stories
                 itemBuilder: (context, index) {
                   if (index == 0) {
-                    return _buildAddStoryButton();
+                    return BuildStoryAddButton();
                   } else {
-                    return _buildStoryItem();
+                    return BuildStoryItem();
                   }
                 },
               ),
@@ -88,12 +112,22 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _buildAddStoryButton() {
-    // Implement the add story button
+class BuildStoryAddButton extends StatelessWidget {
+  const BuildStoryAddButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         // Handle uploading your own story
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const PostScreenPopUp(),
+          ),
+        );
       },
       child: Container(
         margin: const EdgeInsets.only(right: 10),
@@ -111,30 +145,46 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _buildStoryItem() {
-    // Implement the story item
-    return Container(
-      margin: const EdgeInsets.only(right: 10),
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: Colors.blue,
-          width: 2,
-        ),
-        image: const DecorationImage(
-          image: NetworkImage(
-            // Replace with the URL of the user's profile image
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&psig=AOvVaw1MAiclZsdogWbqN1Xytp8x&ust=1691598643567000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCNCI-ZO-zYADFQAAAAAdAAAAABAE',
+class BuildStoryItem extends StatelessWidget {
+  const BuildStoryItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        // Handle story item
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ImageViewScreen(
+              imageAddress: GlobalVariable.groupicon,
+              title: 'status',
+            ),
           ),
-          fit: BoxFit.cover,
+        );
+      },
+      child: Container(
+        margin: const EdgeInsets.only(right: 10),
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: Colors.blue,
+            width: 2,
+          ),
+          image: const DecorationImage(
+            image: AssetImage(GlobalVariable.statusphoto),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
   }
 }
+
 
 
 

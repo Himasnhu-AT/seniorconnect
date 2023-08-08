@@ -4,15 +4,15 @@ import 'package:seniorconnect/constants/Global_Variables.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/trendinggroups.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/yourmessages.dart';
 
-class ShowChatMainGroup extends StatefulWidget {
+class ShowChatMainScreen extends StatefulWidget {
   static const String routeName = '/home';
-  const ShowChatMainGroup({Key? key}) : super(key: key);
+  const ShowChatMainScreen({Key? key}) : super(key: key);
 
   @override
-  State<ShowChatMainGroup> createState() => _HomeScreenState();
+  State<ShowChatMainScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<ShowChatMainGroup> {
+class _HomeScreenState extends State<ShowChatMainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
