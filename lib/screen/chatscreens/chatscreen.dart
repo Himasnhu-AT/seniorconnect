@@ -1,10 +1,15 @@
+// change back color of appbar to white and re3move error. aslso add search button
+//
+
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
 import 'package:seniorconnect/constants/messagewidget/recievemessagewidget.dart';
 import 'package:seniorconnect/constants/messagewidget/sendmessagewidget.dart';
 
 class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+  final String title;
+
+  const ChatScreen({super.key, required this.title});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -13,6 +18,14 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   List<String> messages = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // Add initial messages to the list
+    messages.add('Hi!');
+    messages.add('Hi!');
+  }
 
   void _sendMessage(String message) {
     setState(() {
@@ -24,10 +37,16 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to previous screen
+          },
+        ),
         backgroundColor: GlobalVariable.backgroundColor,
-        title: const Text(
-          'Chat',
-          style: TextStyle(
+        title: Text(
+          widget.title, // Use the provided title here
+          style: const TextStyle(
             fontSize: 25,
             color: Colors.white,
             fontWeight: FontWeight.w500,
@@ -56,6 +75,6 @@ class _ChatScreenState extends State<ChatScreen> {
 
 void main() {
   runApp(const MaterialApp(
-    home: ChatScreen(),
+    home: ChatScreen(title: 'Chat Title'),
   ));
 }
