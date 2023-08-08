@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/screen/popupscreen/imageviewscreen.dart';
 
 class DevGroupChatIcon extends StatelessWidget {
   final String imageAddress;
@@ -22,8 +23,23 @@ class DevGroupChatIcon extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       child: ListTile(
         tileColor: const Color.fromARGB(56, 99, 99, 133),
-        leading: CircleAvatar(
-          backgroundImage: AssetImage(imageAddress),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return ImageViewScreen(
+                    title: groupName,
+                    imageAddress: imageAddress,
+                  );
+                },
+              ),
+            );
+          },
+          child: CircleAvatar(
+            backgroundImage: AssetImage(imageAddress),
+          ),
         ),
         title: Text(
           groupName,

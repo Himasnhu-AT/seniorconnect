@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants/global_variables.dart';
+import '../popupscreen/imageviewscreen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -16,8 +17,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) =>
-            const ImageViewScreen(), // Replace ImageViewScreen with the name of your image view screen
+        builder: (context) => const ImageViewScreen(
+          title: 'UserName',
+          imageAddress: GlobalVariable.profilephoto,
+        ), // Replace ImageViewScreen with the name of your image view screen
       ),
     );
   }
@@ -94,27 +97,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: const Text('Edit'),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class ImageViewScreen extends StatelessWidget {
-  const ImageViewScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile Picture'),
-      ),
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context); // Close the image view when tapped
-          },
-          child: Image.asset(GlobalVariable.profilephoto),
         ),
       ),
     );

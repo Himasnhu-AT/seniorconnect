@@ -24,7 +24,7 @@ class _UsersMessagesState extends State<UsersMessages> {
         'id':
             'Chat $i ID', // Replace 'Chat $i ID' with actual chat ID from your data
         'groupName': 'Person $i',
-        'memberDetails': 'Long time no see!',
+        'memberDetails': "Last message in person $i's chat",
       });
     }
 
@@ -35,22 +35,25 @@ class _UsersMessagesState extends State<UsersMessages> {
   Widget build(BuildContext context) {
     return Column(
       children: generateChatsData().map((chatData) {
-        return DevGroupChatIcon(
-          imageAddress: GlobalVariable.groupicon,
-          groupName: chatData['groupName']!,
-          memberDetails: chatData['memberDetails']!,
-          id: chatData['id']!,
+        return GestureDetector(
           onTap: () {
-            // Implement your logic when a chat is tapped
-            // You can navigate to the chat screen or perform any other action.
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: ((context) =>
-                    ChatScreen(title: chatData['groupName']!)),
-              ),
-            );
+            // Navigate to the chat screen
           },
+          child: DevGroupChatIcon(
+            imageAddress: GlobalVariable.groupicon,
+            groupName: chatData['groupName']!,
+            memberDetails: chatData['memberDetails']!,
+            id: chatData['id']!,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      ChatScreen(title: chatData['groupName']!),
+                ),
+              );
+            },
+          ),
         );
       }).toList(),
     );

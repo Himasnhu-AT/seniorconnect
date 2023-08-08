@@ -34,14 +34,7 @@ class HomeScreen extends StatelessWidget {
       postImage: GlobalVariable.profilephoto,
       caption: 'Caption for profile photo',
     ),
-    // Add more post
-    // syntx:
-    // Post(
-    //   username: '',
-    //   profileImage: ,
-    //   postImage: ,
-    //   caption: '',
-    // ),
+    // Add more posts
   ];
 
   HomeScreen({super.key});
@@ -61,19 +54,90 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        body: Container(
-          color: GlobalVariable.backgroundColor,
-          child: ListView.builder(
-            itemCount: posts.length,
-            itemBuilder: (context, index) {
-              return PostWidget(post: posts[index]);
-            },
+        body: Column(
+          children: [
+            Container(
+              color: GlobalVariable.backgroundColor,
+              height: 70,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 12, // Number of stories
+                itemBuilder: (context, index) {
+                  if (index == 0) {
+                    return _buildAddStoryButton();
+                  } else {
+                    return _buildStoryItem();
+                  }
+                },
+              ),
+            ),
+            Expanded(
+              child: Container(
+                color: GlobalVariable.backgroundColor,
+                child: ListView.builder(
+                  itemCount: posts.length,
+                  itemBuilder: (context, index) {
+                    return PostWidget(post: posts[index]);
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAddStoryButton() {
+    // Implement the add story button
+    return GestureDetector(
+      onTap: () {
+        // Handle uploading your own story
+      },
+      child: Container(
+        margin: const EdgeInsets.only(right: 10),
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.grey[300],
+        ),
+        child: const Icon(
+          Icons.add,
+          size: 40,
+          color: Colors.blue,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStoryItem() {
+    // Implement the story item
+    return Container(
+      margin: const EdgeInsets.only(right: 10),
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(
+          color: Colors.blue,
+          width: 2,
+        ),
+        image: const DecorationImage(
+          image: NetworkImage(
+            // Replace with the URL of the user's profile image
+            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotor.com%2Fblog%2Fprofile-picture-ideas%2F&psig=AOvVaw1MAiclZsdogWbqN1Xytp8x&ust=1691598643567000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCNCI-ZO-zYADFQAAAAAdAAAAABAE',
           ),
+          fit: BoxFit.cover,
         ),
       ),
     );
   }
 }
+
+
+
 
 // OLD HOME SCREEN:
 // // ignore_for_file: sized_box_for_whitespace

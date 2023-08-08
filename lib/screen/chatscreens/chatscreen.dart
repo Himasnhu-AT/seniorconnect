@@ -1,3 +1,6 @@
+// change back color of appbar to white and re3move error. aslso add search button
+//
+
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
 import 'package:seniorconnect/constants/messagewidget/recievemessagewidget.dart';
@@ -34,6 +37,12 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to previous screen
+          },
+        ),
         backgroundColor: GlobalVariable.backgroundColor,
         title: Text(
           widget.title, // Use the provided title here
