@@ -18,24 +18,26 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      obscureText: obscureText,
-      decoration: InputDecoration(
-        hintText: hintText,
-        filled: true,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: BorderSide.none,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: TextField(
+        obscureText: obscureText,
+        decoration: InputDecoration(
+          hintText: hintText,
+          filled: true,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
+          prefixIcon: leftIcon != null ? Icon(leftIcon) : null,
+          suffixIcon: rightIcon != null
+              ? IconButton(
+                  onPressed: onRightIconPressed,
+                  icon: Icon(rightIcon),
+                )
+              : null,
         ),
-        contentPadding:
-            const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
-        prefixIcon: leftIcon != null ? Icon(leftIcon) : null,
-        suffixIcon: rightIcon != null
-            ? IconButton(
-                onPressed: onRightIconPressed,
-                icon: Icon(rightIcon),
-              )
-            : null,
       ),
     );
   }

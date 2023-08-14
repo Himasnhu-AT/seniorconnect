@@ -30,8 +30,11 @@ class _LoginPageState extends State<LoginPage> {
           // ignore: avoid_unnecessary_containers
           child: Column(
             children: [
-              Image.asset(
-                'assets/illustration.png',
+              Padding(
+                padding: const EdgeInsets.only(top: 24.0),
+                child: Image.asset(
+                  'assests/image/splash3.png',
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),

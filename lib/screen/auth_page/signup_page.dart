@@ -31,7 +31,7 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Column(
             children: [
               Image.asset(
-                'assets/illustration.png',
+                'assests/image/splash3.png',
                 height: 320,
               ),
               Padding(
