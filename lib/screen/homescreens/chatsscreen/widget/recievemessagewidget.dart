@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../constants/Global_Variables.dart';
+
 class ReceiveMessageWidget extends StatelessWidget {
   final String message;
 
@@ -19,7 +21,7 @@ class ReceiveMessageWidget extends StatelessWidget {
         ),
         child: Text(
           message,
-          style: const TextStyle(color: Colors.white),
+          style: const TextStyle(color: GlobalVariable.textcolor),
         ),
       ),
     );

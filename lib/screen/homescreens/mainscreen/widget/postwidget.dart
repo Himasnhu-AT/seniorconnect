@@ -61,7 +61,7 @@ class _PostWidgetState extends State<PostWidget> {
                       child: Text(
                         'Report Post',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: GlobalVariable.textcolor,
                             fontSize: 18,
                             fontWeight: FontWeight.normal),
                       ),
@@ -71,7 +71,7 @@ class _PostWidgetState extends State<PostWidget> {
                       child: Text(
                         'Share Post',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: GlobalVariable.textcolor,
                             fontSize: 18,
                             fontWeight: FontWeight.normal),
                       ),

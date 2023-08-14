@@ -88,8 +88,8 @@ class HomeScreen extends StatelessWidget {
                 },
                 child: const Icon(
                   Icons.telegram_outlined,
-                  color: Colors.white,
-                  size: 30,
+                  color: GlobalVariable.textcolor,
+                  size: 40,
                 ),
               ),
             ],

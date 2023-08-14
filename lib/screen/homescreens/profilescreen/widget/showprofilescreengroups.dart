@@ -53,13 +53,13 @@ class _ShowProfileScreenState extends State<ShowProfileScreenGroupChat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: GlobalVariable.textcolor),
         title: Text(
           name,
           style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
           ),
         ),
         backgroundColor: GlobalVariable.backgroundColor,
@@ -85,7 +85,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreenGroupChat> {
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),
@@ -93,7 +93,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreenGroupChat> {
               groupID,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),
@@ -101,7 +101,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreenGroupChat> {
               groupmembers,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),

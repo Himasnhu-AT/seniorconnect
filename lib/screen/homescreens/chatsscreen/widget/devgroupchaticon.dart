@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/screen/popupscreen/imageviewscreen.dart';
 
+import '../../../../constants/Global_Variables.dart';
+
 class DevGroupChatIcon extends StatelessWidget {
   final String imageAddress;
   final String groupName;
@@ -44,7 +46,7 @@ class DevGroupChatIcon extends StatelessWidget {
         title: Text(
           groupName,
           style: const TextStyle(
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
@@ -52,7 +54,7 @@ class DevGroupChatIcon extends StatelessWidget {
         subtitle: Text(
           memberDetails,
           style: const TextStyle(
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
             fontSize: 15,
             fontWeight: FontWeight.w400,
           ),
