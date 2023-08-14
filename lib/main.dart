@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/constants/colors.dart';
+import 'package:seniorconnect/constants/Global_Variables.dart';
 import 'package:seniorconnect/screen/splash_screen/welcome_page.dart.dart';
 
 void main() {
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.blue,
         ).copyWith(
-          background: colorconstants['background'],
+          background: GlobalVariable.backgroundColor,
         ),
-        canvasColor: colorconstants['background'],
+        canvasColor: GlobalVariable.backgroundColor,
       ),
       home: const WelcomePage(),
     );
