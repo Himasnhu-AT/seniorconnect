@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/constants/widget/button.dart';
 
 import '../../../../constants/global_variables.dart';
+import '../../../auth_page/widgets/custom_button.dart';
 import '../../../popupscreen/imageviewscreen.dart';
 
 class ShowProfileScreenGroupChat extends StatefulWidget {
@@ -108,7 +108,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreenGroupChat> {
             const SizedBox(height: 20),
             CustomButton(
                 text: 'Edit',
-                onTap: () => {
+                onPressed: () => {
                       // write logic here
                     })
           ],
