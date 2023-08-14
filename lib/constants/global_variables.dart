@@ -10,7 +10,7 @@ class GlobalVariable {
   static const Color greyBackgroundCOlor = Color(0xffebecee);
   static var selectedNavBarColor = Colors.cyan[800]!;
   static const unselectedNavBarColor = Colors.white;
-  static const backgroundColor = Color.fromARGB(255, 0, 0, 6);
+  static const backgroundColor = Color.fromARGB(255, 1, 6, 27);
   static const lightbackgroundColor = Color.fromARGB(51, 87, 87, 169);
 
   // remove variable below:

@@ -18,25 +18,41 @@ class HomeScreen extends StatelessWidget {
       profileImage: GlobalVariable.profilephoto,
       postImage: GlobalVariable.splash2,
       caption: 'This is splash 2 for app',
+      likes: 5,
+      comments: 2,
+      shares: 4,
+      dislike: 3,
     ),
     Post(
       username: 'Test 1',
       profileImage: GlobalVariable.profilephoto,
       postImage: GlobalVariable.postphoto,
       caption: 'Caption for profile photo',
+      likes: 20,
+      comments: 3,
+      shares: 23,
+      dislike: 2,
     ),
     Post(
       username: 'Test 1',
       profileImage: GlobalVariable.profilephoto,
       postImage: GlobalVariable.splash1,
       caption: 'This is splash 1 for app',
+      likes: 34,
+      comments: 3,
+      shares: 234,
+      dislike: 23,
     ),
     Post(
       username: 'username1',
       profileImage: GlobalVariable.profilephoto,
       postImage: GlobalVariable.profilephoto,
       caption: 'Caption for profile photo',
-    ),
+      likes: 23,
+      comments: 23,
+      shares: 234,
+      dislike: 24,
+    )
     // Add more posts
   ];
 

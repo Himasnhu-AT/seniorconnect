@@ -3,11 +3,16 @@ import 'package:seniorconnect/screen/homescreens/mainscreen/widget/post.dart';
 
 import '../../../../constants/global_variables.dart';
 
-class PostWidget extends StatelessWidget {
+class PostWidget extends StatefulWidget {
   final Post post;
 
   const PostWidget({super.key, required this.post});
 
+  @override
+  State<PostWidget> createState() => _PostWidgetState();
+}
+
+class _PostWidgetState extends State<PostWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,27 +26,55 @@ class PostWidget extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundImage: AssetImage(post.profileImage),
+                  radius: 20,
+                  backgroundImage: AssetImage(widget.post.profileImage),
                 ),
                 const SizedBox(width: 10),
                 Text(
-                  post.username,
+                  widget.post.username,
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.normal,
                   ),
                 ),
-                const Spacer(), // Add space to push the dots icon to the right
+                const Spacer(),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        // Handle Save button logic
+                      },
+                      iconSize: 30,
+                      icon: const Icon(
+                        Icons.save_alt_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
                 PopupMenuButton(
+                  color: const Color.fromARGB(255, 5, 17, 65),
                   itemBuilder: (context) => [
                     const PopupMenuItem(
                       value: 'delete',
-                      child: Text('Delete Post'),
+                      child: Text(
+                        'Delete Post',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal),
+                      ),
                     ),
                     const PopupMenuItem(
                       value: 'share',
-                      child: Text('Share Post'),
+                      child: Text(
+                        'Share Post',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal),
+                      ),
                     ),
                     // Add more menu items if needed
                   ],
@@ -53,6 +86,7 @@ class PostWidget extends StatelessWidget {
                       // Share post logic
                     }
                   },
+                  iconSize: 30,
                   icon: const Icon(
                     Icons.more_vert,
                     color: Colors.white,
@@ -65,7 +99,7 @@ class PostWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              post.caption,
+              widget.post.caption,
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
@@ -77,7 +111,7 @@ class PostWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Image.asset(
-              post.postImage,
+              widget.post.postImage,
               fit: BoxFit.cover,
               width: double.infinity,
               height: 200,
@@ -86,49 +120,80 @@ class PostWidget extends StatelessWidget {
           //
           // bottom buttons
           //
-          const Padding(
-            padding: EdgeInsets.all(20.0),
+          // ignore: prefer_const_constructors
+          Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // add icon like
-                  Icon(
-                    size: 30,
-                    Icons.thumb_up_alt_outlined,
-                    color: Colors.white,
-                  ),
-                  SizedBox(width: 5),
-                  // thumbs down icon
-                  Icon(
-                    size: 30,
-                    Icons.thumb_down_alt_outlined,
-                    color: Colors.white,
-                  ),
-                  SizedBox(width: 5),
-                  // add icon comment
-                  Icon(
-                    size: 30,
-                    Icons.comment_outlined,
-                    color: Colors.white,
-                  ),
-                  SizedBox(width: 5),
-                  // add icon share
-                  Icon(
-                    size: 30,
-                    Icons.share_outlined,
-                    color: Colors.white,
-                  ),
-                  SizedBox(height: 5),
-                  // add icon save],
-                  Icon(
-                    size: 30,
-                    Icons.save_outlined,
-                    color: Colors.white,
-                  ),
-                ]),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Like Button
+                BottomButton(
+                    number: widget.post.likes,
+                    icon: Icons.thumb_up_alt_outlined,
+                    onTapcallback: () => {
+                          setState(() {
+                            // widget.post.likes++; // Increment comments
+                          })
+                        }),
+                // Dislike Button
+                BottomButton(
+                    number: widget.post.dislike,
+                    icon: Icons.thumb_down_alt_outlined,
+                    onTapcallback: () => {}),
+                // Comment Button
+                BottomButton(
+                    number: widget.post.comments,
+                    icon: Icons.comment_outlined,
+                    onTapcallback: () => {}),
+                // Share Button
+                BottomButton(
+                    number: widget.post.shares,
+                    icon: Icons.share_outlined,
+                    onTapcallback: () => {}),
+              ],
+            ),
           ),
         ],
       ),
     );
   }
+}
+
+// ignore: non_constant_identifier_names
+Widget BottomButton({
+  int? number,
+  required IconData icon,
+  required Function onTapcallback,
+}) {
+  return Container(
+    decoration: BoxDecoration(
+      color: Colors.transparent,
+      border: Border.all(color: Colors.white),
+      borderRadius: BorderRadius.circular(10),
+    ),
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          Text(
+            number.toString(),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          const SizedBox(width: 5),
+          GestureDetector(
+            onTap: onTapcallback as void Function()?,
+            child: Icon(
+              icon,
+              size: 30,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
