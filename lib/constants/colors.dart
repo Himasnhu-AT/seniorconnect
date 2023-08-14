@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 const colorconstants = {
-  'buttonBackground': Color.fromARGB(255, 38, 38, 242),
+  'buttonBackground': Colors.blue,
   'cardBackground': Color.fromRGBO(128, 128, 128, 0.7),
-  'appBarGradientStart': Color(0xFF0000FF),
-  'appBarGradientEnd': Color(0xFF1565C0),
+  'appBarGradientStart': Colors.blue,
+  'appBarGradientEnd': Color(0xFF0D47A1), // Darker shade of blue
   'textColorMain': Color(0xFF000000),
   'background': Colors.white,
 };

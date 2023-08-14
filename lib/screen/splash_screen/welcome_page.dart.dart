@@ -18,11 +18,11 @@ class WelcomePage extends StatelessWidget {
               children: [
                 const Spacer(),
                 Image.asset(
-                  'assets/illustration.png',
+                  'assests/image/splash2.png',
                 ),
                 const SizedBox(height: 40),
                 const Text(
-                  "Explore your journey \nonly with us",
+                  "Explore your journey \nwith your college seniors",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 26,
@@ -31,7 +31,7 @@ class WelcomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "All your vacations destinations are here,\nenjoy your holiday",
+                  "Get Guidance, Career Advice, \nand from your seniors \nwhile sharing your knowledge,\n experiences with your juniors",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black54,
