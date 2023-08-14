@@ -1,10 +1,9 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:seniorconnect/constants/widget/button.dart';
-import 'package:seniorconnect/constants/widget/text_feild_sign.dart';
+import 'package:seniorconnect/screen/auth_page/widgets/custom_text_feild.dart';
 
 import '../../constants/global_variables.dart';
+import '../auth_page/widgets/custom_button.dart';
 
 class PostScreenPopUp extends StatefulWidget {
   const PostScreenPopUp({super.key});
@@ -17,31 +16,27 @@ class _PostScreenPopUpState extends State<PostScreenPopUp> {
   List<PlatformFile>? _selectedFiles;
 
   Future<void> _pickDocuments() async {
-    try {
-      final result = await FilePicker.platform.pickFiles(type: FileType.any);
-      if (result != null) {
-        setState(() {
-          _selectedFiles = result.files;
-        });
-      }
-    } on PlatformException catch (e) {
-      print("Error while picking documents: $e");
+    final result = await FilePicker.platform.pickFiles(type: FileType.any);
+    if (result != null) {
+      setState(() {
+        _selectedFiles = result.files;
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 0, 17),
+      backgroundColor: GlobalVariable.backgroundColor,
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: GlobalVariable.textcolor),
         backgroundColor: GlobalVariable.backgroundColor,
         title: const Text(
           'Post',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 25,
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
           ),
         ),
       ),
@@ -55,7 +50,7 @@ class _PostScreenPopUpState extends State<PostScreenPopUp> {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             GestureDetector(
@@ -70,7 +65,7 @@ class _PostScreenPopUpState extends State<PostScreenPopUp> {
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: GlobalVariable.textcolor,
                     ),
                   ),
                 ),
@@ -82,26 +77,19 @@ class _PostScreenPopUpState extends State<PostScreenPopUp> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(
                 vertical: 5.0,
               ),
-              child: CustomTextFieldSign(hintText: 'Write Here'),
+              child: CustomTextField(hintText: 'Write Here'),
             ),
             const SizedBox(height: 10),
             CustomButton(
               text: 'Post',
-              onTap: () {
-                // Write the logic for posting here
-                if (_selectedFiles != null) {
-                  // Get the selected image file
-                  PlatformFile selectedFile = _selectedFiles![0];
-                  print('Selected file: ${selectedFile.name}');
-                }
-              },
+              onPressed: () {},
             )
           ],
         ),
