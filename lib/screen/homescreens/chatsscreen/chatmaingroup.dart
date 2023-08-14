@@ -17,13 +17,13 @@ class _HomeScreenState extends State<ShowChatMainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: GlobalVariable.textcolor),
         title: const Text(
           'Messages',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
           ),
         ),
         backgroundColor: GlobalVariable.backgroundColor,
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<ShowChatMainScreen> {
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white),
+                  color: GlobalVariable.textcolor),
             ),
             const SizedBox(height: 5),
             Container(
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<ShowChatMainScreen> {
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white),
+                  color: GlobalVariable.textcolor),
             ),
             const SizedBox(height: 5),
             Container(

@@ -33,7 +33,7 @@ class _PostWidgetState extends State<PostWidget> {
                 Text(
                   widget.post.username,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: GlobalVariable.textcolor,
                     fontSize: 20,
                     fontWeight: FontWeight.normal,
                   ),
@@ -48,20 +48,20 @@ class _PostWidgetState extends State<PostWidget> {
                       iconSize: 30,
                       icon: const Icon(
                         Icons.save_alt_outlined,
-                        color: Colors.white,
+                        color: GlobalVariable.textcolor,
                       ),
                     ),
                   ],
                 ),
                 PopupMenuButton(
-                  color: const Color.fromARGB(255, 5, 17, 65),
+                  color: const Color.fromARGB(255, 0, 0, 0),
                   itemBuilder: (context) => [
                     const PopupMenuItem(
                       value: 'delete',
                       child: Text(
-                        'Delete Post',
+                        'Report Post',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: GlobalVariable.textcolor,
                             fontSize: 18,
                             fontWeight: FontWeight.normal),
                       ),
@@ -71,7 +71,7 @@ class _PostWidgetState extends State<PostWidget> {
                       child: Text(
                         'Share Post',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: GlobalVariable.textcolor,
                             fontSize: 18,
                             fontWeight: FontWeight.normal),
                       ),
@@ -89,7 +89,7 @@ class _PostWidgetState extends State<PostWidget> {
                   iconSize: 30,
                   icon: const Icon(
                     Icons.more_vert,
-                    color: Colors.white,
+                    color: GlobalVariable.textcolor,
                   ),
                 ),
               ],
@@ -101,7 +101,7 @@ class _PostWidgetState extends State<PostWidget> {
             child: Text(
               widget.post.caption,
               style: const TextStyle(
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
                 fontSize: 18,
                 fontWeight: FontWeight.normal,
               ),
@@ -122,9 +122,8 @@ class _PostWidgetState extends State<PostWidget> {
           //
           // ignore: prefer_const_constructors
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Like Button
                 BottomButton(
@@ -145,11 +144,6 @@ class _PostWidgetState extends State<PostWidget> {
                     number: widget.post.comments,
                     icon: Icons.comment_outlined,
                     onTapcallback: () => {}),
-                // Share Button
-                BottomButton(
-                    number: widget.post.shares,
-                    icon: Icons.share_outlined,
-                    onTapcallback: () => {}),
               ],
             ),
           ),
@@ -166,10 +160,8 @@ Widget BottomButton({
   required Function onTapcallback,
 }) {
   return Container(
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       color: Colors.transparent,
-      border: Border.all(color: Colors.white),
-      borderRadius: BorderRadius.circular(10),
     ),
     child: Padding(
       padding: const EdgeInsets.all(8.0),
@@ -178,8 +170,8 @@ Widget BottomButton({
           Text(
             number.toString(),
             style: const TextStyle(
-              color: Colors.white,
-              fontSize: 25,
+              color: GlobalVariable.textcolor,
+              fontSize: 15,
               fontWeight: FontWeight.normal,
             ),
           ),
@@ -188,8 +180,8 @@ Widget BottomButton({
             onTap: onTapcallback as void Function()?,
             child: Icon(
               icon,
-              size: 30,
-              color: Colors.white,
+              size: 20,
+              color: GlobalVariable.textcolor,
             ),
           ),
         ],

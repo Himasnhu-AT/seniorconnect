@@ -11,16 +11,16 @@ class ImageViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 1, 1, 24),
+      backgroundColor: GlobalVariable.backgroundColor,
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: GlobalVariable.textcolor),
         backgroundColor: GlobalVariable.backgroundColor,
         title: Text(
           title,
           style: const TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 25,
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
           ),
         ),
       ),

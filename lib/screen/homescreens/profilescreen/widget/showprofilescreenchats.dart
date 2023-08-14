@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:seniorconnect/constants/widget/button.dart';
 
 import '../../../../constants/global_variables.dart';
+import '../../../auth_page/widgets/custom_button.dart';
 import '../../../popupscreen/imageviewscreen.dart';
 
 class ShowProfileScreen extends StatefulWidget {
@@ -61,13 +61,13 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: GlobalVariable.textcolor),
         title: Text(
           name,
           style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: GlobalVariable.textcolor,
           ),
         ),
         backgroundColor: GlobalVariable.backgroundColor,
@@ -93,7 +93,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),
@@ -101,7 +101,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
               email,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),
@@ -109,7 +109,7 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
               phonenumber,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),
@@ -117,18 +117,21 @@ class _ShowProfileScreenState extends State<ShowProfileScreen> {
               address,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
             ),
             const SizedBox(height: 10),
             // Add other user details here
 
             const SizedBox(height: 20),
-            CustomButton(
-              text: 'Edit',
-              onTap: () => {
-                // write logic here
-              },
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: CustomButton(
+                text: 'Edit',
+                onPressed: () => {
+                  // write logic here
+                },
+              ),
             ),
           ],
         ),

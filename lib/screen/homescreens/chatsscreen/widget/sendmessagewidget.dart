@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../../constants/Global_Variables.dart';
+
 class SendMessageWidget extends StatelessWidget {
   String message;
   final Function(String) onMessageSent;
@@ -16,7 +18,7 @@ class SendMessageWidget extends StatelessWidget {
         Expanded(
           child: TextField(
             style: const TextStyle(
-              color: Colors.white,
+              color: GlobalVariable.textcolor,
             ),
             controller: TextEditingController(text: message),
             onChanged: (newMessage) {
@@ -25,7 +27,7 @@ class SendMessageWidget extends StatelessWidget {
             decoration: InputDecoration(
               hintText: 'Type your message...',
               hintStyle: const TextStyle(
-                color: Colors.white,
+                color: GlobalVariable.textcolor,
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),

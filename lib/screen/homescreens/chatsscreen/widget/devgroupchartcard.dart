@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/screenaddons/groupchatscreen.dart';
 
+import '../../../../constants/Global_Variables.dart';
+
 class DevGroupChartCard extends StatelessWidget {
   final String imageAddress;
   final String groupName;
@@ -57,7 +59,7 @@ class DevGroupChartCard extends StatelessWidget {
                     Text(
                       groupName,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: GlobalVariable.textcolor,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),

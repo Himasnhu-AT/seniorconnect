@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
-import 'package:seniorconnect/constants/fake_usr_details.dart';
+import 'package:seniorconnect/constants/test_data/fake_usr_details.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/recievemessagewidget.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/sendmessagewidget.dart';
 import 'package:seniorconnect/screen/homescreens/profilescreen/widget/showprofilescreenchats.dart';
@@ -41,7 +41,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          color: Colors.white,
+          color: GlobalVariable.textcolor,
           onPressed: () {
             Navigator.pop(context); // Navigate back to previous screen
           },
@@ -67,7 +67,7 @@ class _ChatScreenState extends State<ChatScreen> {
             widget.title, // Use the provided title here
             style: const TextStyle(
               fontSize: 25,
-              color: Colors.white,
+              color: GlobalVariable.textcolor,
               fontWeight: FontWeight.w500,
             ),
           ),
