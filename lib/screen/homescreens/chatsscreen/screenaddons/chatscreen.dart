@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/constants/Global_Variables.dart';
-import 'package:seniorconnect/constants/fake_usr_details.dart';
+import 'package:seniorconnect/constants/test_data/fake_usr_details.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/recievemessagewidget.dart';
 import 'package:seniorconnect/screen/homescreens/chatsscreen/widget/sendmessagewidget.dart';
 import 'package:seniorconnect/screen/homescreens/profilescreen/widget/showprofilescreenchats.dart';

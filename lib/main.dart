@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seniorconnect/constants/colors.dart';
 import 'package:seniorconnect/screen/splash_screen/welcome_page.dart.dart';
 
 void main() {
@@ -6,20 +7,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 0, 0, 6),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
         ).copyWith(
-          background: const Color.fromARGB(255, 1, 0, 32),
+          background: colorconstants['background'],
         ),
+        canvasColor: colorconstants['background'],
       ),
       home: const WelcomePage(),
     );
