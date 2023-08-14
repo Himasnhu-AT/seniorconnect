@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seniorconnect/navigationbarhomescreen.dart';
+import 'package:seniorconnect/screen/auth_page/forgot_password/forgot_password_start.dart';
 
 import 'signup_page.dart';
 import 'widgets/custom_button.dart';
@@ -75,8 +76,29 @@ class _LoginPageState extends State<LoginPage> {
                             : Icons.visibility_off,
                         onRightIconPressed: _togglePasswordVisibility,
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return const ForgotPasswordDialog();
+                                },
+                              );
+                            },
+                            child: const Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 10, top: 10),
+                        padding: const EdgeInsets.only(bottom: 10),
                         child: SizedBox(
                           width: double.maxFinite,
                           child: Padding(
